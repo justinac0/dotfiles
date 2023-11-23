@@ -1,0 +1,52 @@
+window:
+    opacity: 1.0
+    padding:
+      x: 15
+      y: 15
+font:
+    size: 12.0
+    normal:
+        family: JetBrains Mono
+        style: Regular
+    bold:
+        family: JetBrains Mono
+        style: Bold
+    italic:
+        family: JetBrains Mono
+        style: Italic
+    bold_italic:
+        family: JetBrains Mono
+        style: Bold Italic
+
+
+colors:
+  # Default colors
+  primary:
+    background: '0x1e272e'
+    foreground: '0xfafafa'
+
+  # Cursor colors
+  cursor:
+    text:   '0xfafafa'
+    cursor: '0x00d8d6'
+
+  # Normal colors
+  normal:
+    black:   '0x1e272e'
+    red:     '0xff3f34'
+    green:   '0x05c46b'
+    blue:    '0x0fbcf9'
+    magenta: '0x3c40c6'
+    cyan:    '0x00d8d6'
+    white:   '0xb7c5d3'
+
+  # Bright colors
+  bright:
+    black:   '0x485460'
+    red:     '0xff5e57'
+    green:   '0x0be881'
+    yellow:  '0xffdd59'
+    blue:    '0x4bcffa'
+    magenta: '0x575fcf'
+    cyan:    '0x34e7e4'
+    white:   '0xffffff'
