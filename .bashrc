@@ -25,6 +25,6 @@ function get_cwd_git_branch() {
     fi
 }
 
-PS1='\u@\h \w $(get_cwd_git_branch)$ '
+PS1='\u@\h :: [\w\]:$(get_cwd_git_branch)$ '
 
 . "$HOME/.cargo/env"
