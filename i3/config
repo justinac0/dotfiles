@@ -17,6 +17,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 bindsym $mod+d exec --no-startup-id dmenu_run
+# dmenu_run
 
 bindsym $mod+Shift+x exec "\
     echo 1 > /sys/class/leds/platform\:\:micmute/brightness; \
@@ -120,7 +121,7 @@ mode "resize" {
 bar {
     	status_command i3status
     	position bottom 
-	    font "xft:JetBrains Mono Bold 10"
+	    font "xft:JetBrains Mono 10"
 
     	colors {
         	background #1e272e
@@ -129,7 +130,7 @@ bar {
         	# class             out.        bg.         fg.
         	focused_workspace   #485460     #485460     #fafafa
         	active_workspace    #5f676a     #5f676a     #fafafa
-        	inactive_workspace  #1e272e     #1e272e     #666666
+        	inactive_workspace  #1e272e     #1e272e     #fafafa
         	urgent_workspace    #900000     #900000     #fafafa
         	binding_mode        #2f343a     #2f343a     #fafafa
     	}
@@ -137,7 +138,7 @@ bar {
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #fafafa #fafafa #000000 #808e9b   #fafafa
-client.focused_inactive #333333 #5f676a #fafafa #808e9b   #5f676a
+client.focused_inactive #485460 #485460 #fafafa #808e9b   #485460
 client.unfocused        #485460 #485460 #999999 #808e9b   #485460
 client.urgent           #2f343a #2f343a #fafafa #808e9b   #2f343a
 client.placeholder      #0c0c0c #0c0c0c #fafafa #808e9b   #0c0c0c
@@ -146,16 +147,22 @@ client.background       #fafafa
 
 bindsym $mod+r mode "resize"
 
-gaps inner 20
-
-default_border pixel 4
-default_floating_border pixel 4
+gaps inner 5
+gaps outer 15
+default_border pixel 2
+default_floating_border pixel 2
 
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
+for_window [window_role="steamwebhelper"] floating enable
+for_window [window_role="Godot_Engine"] floating enable
+for_window [window_role="client"] floating enable
+for_window [window_role="shady"] floating enable
+for_window [window_role="QEMU"] floating enable
 
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 #exec --no-startup-id pasystray
-exec_always --no-startup-id feh --no-fehbg --bg-scale ~/Pictures/Wallpapers/clouds_mountain.jpg
+exec --no-startup-id udiskie -t 
+exec_always --no-startup-id feh --no-fehbg --bg-scale ~/Pictures/Wallpapers/minecraft-windows.jpg
