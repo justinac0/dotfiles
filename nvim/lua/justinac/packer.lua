@@ -12,19 +12,28 @@ return require('packer').startup(function(use)
   }
 
   use('nvim-lua/plenary.nvim')
-  use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-  use('nvim-treesitter/playground')
+  --use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+  --use('nvim-treesitter/playground')
   use('ThePrimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
+  use('brenoprata10/nvim-highlight-colors')
+  use({
+      "navarasu/onedark.nvim",
+      as = "onedark",
+      style = "darker", -- deep
+      config = function()
+          vim.cmd('colorscheme onedark')
+      end
+  })
 
   use {
 	'VonHeikemen/lsp-zero.nvim',
-	requires = {
+	branch = "v3.x",
+    requires = {
 		{'neovim/nvim-lspconfig'},
 		{'williamboman/mason.nvim'},
 		{'williamboman/mason-lspconfig.nvim'},
-		
 		{'hrsh7th/nvim-cmp'},
 		{'hrsh7th/cmp-buffer'},
 		{'hrsh7th/cmp-path'},
