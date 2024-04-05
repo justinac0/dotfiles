@@ -15,7 +15,7 @@ order += "load"
 order += "tztime local"
 
 wireless wlan0 {
-        format_up = "W: (%quality at %essid, %bitrate) %ip"
+        format_up = "W: %ip up %bitrate"
         format_down = "W: down"
 }
 ethernet eth0 {
