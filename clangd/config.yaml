@@ -1,0 +1,22 @@
+CompileFlags:
+  Add:
+    - -x
+    - c
+    - -std=c99
+    - -DDEBUG=1
+    - -D__C51__
+    - -D__SLS_IDE__
+    - -Dsfr=volatile unsigned char
+    - -Dsfr16=volatile unsigned int
+    - -Dsbit=volatile unsigned char
+    - -Dbit=unsigned char
+    - -Ddata=
+    - -Didata=
+    - -Dxdata=
+    - -Dpdata=
+    - -Dbdata=
+    - -Dcode=
+    - -I/home/justin/Tools/SimplicityStudio_v5/developer/sdks/8051/v4.3.1/Device/shared/si8051Base
+    - -I/home/justin/Tools/SimplicityStudio_v5/developer/sdks/8051/v4.3.1/Device/EFM8UB1/inc
+    - -Wno-keyword-macro
+    - -ferror-limit=0
